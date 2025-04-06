@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Táblázat – Webprog</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../js/tabla.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+   
+    <header>
+      <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Főoldal</a></li>
+        <li><a href="tabla.html" class="active">Táblázat</a></li>
+        <li><a href="html5.html">HTML5 APIS</a></li>
+        <li><a href="chartjs.html">ChartJS</a></li>
+        <li><a href="ajax.html">AJAX</a></li>
+        <li><a href="oojs.html">OOJS</a></li>
+        <li><a href="../react/app1/index.html">React App</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+    <aside>
+      <p>Adatkezelő táblázat kezelése.</p>
+    </aside>
+
+    <main>
+      <h2>Felhasználók kezelése</h2>
+
+      <form id="userForm" class="row g-3 mb-4" novalidate>
+        <div class="col-md-3">
+          <input type="text" id="name" class="form-control" placeholder="Név" required maxlength="30">
+        </div>
+        <div class="col-md-2">
+          <input type="number" id="age" class="form-control" placeholder="Életkor" required min="0" max="120">
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="city" class="form-control" placeholder="Város" required maxlength="30">
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="phone" class="form-control" placeholder="Telefonszám" required maxlength="15">
+        </div>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-primary w-100">➕</button>
+        </div>
+      </form>
+
+      <div class="mb-3">
+        <input type="text" id="search" class="form-control" placeholder="Keresés...">
+      </div>
+    
+      <table class="table table-striped table-hover" id="userTable">
+        <thead class="table-primary">
+          <tr>
+            <th data-col="name">Név</th>
+            <th data-col="age">Életkor</th>
+            <th data-col="city">Város</th>
+            <th data-col="phone">Telefonszám</th>
+            <th>Műveletek</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS scriptből -->
+        </tbody>
+      </table>
+      
+    </main>
+</div>
+    <footer>
+      <p>Készítette: Samu Dániel, Neptun kód: NN8T44 || Samu Dániel2, Neptun kód: NN8T44</p>
+    </footer>
+  
+</body>
+</html>
