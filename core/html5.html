@@ -179,9 +179,33 @@
               <path d="M0,-15 A15,15 0 0,1 7.5,-13 L35,-60 A70,70 0 0,0 -35,-60 L-7.5,-13 A15,15 0 0,1 0,-15 Z" transform="rotate(240)" />
             </g>
           
-            <!-- Középső fekete kör -->
+            <!-- Középső fekete kör-->
             <circle cx="100" cy="100" r="10" fill="black"/>
           </svg>
+
+          <h2>SSE</h2>
+          <p id="sseStatus">Kapcsolódás...</p>
+
+          <script>
+          const output = document.getElementById("sseStatus");
+
+          if (!!window.EventSource) {
+              const source = new EventSource("http://localhost:3000/core/sse.php");
+
+              source.onmessage = function(event) {
+                  output.innerHTML = event.data;
+              };
+
+              source.onerror = function() {
+                  output.innerHTML = "⚠️ Hiba történt a kapcsolódás során.";
+                  source.close();
+              };
+          } else {
+              output.innerHTML = "❌ A böngésző nem támogatja az SSE-t.";
+          }
+          </script>
+
+
 
     </main>
   </div>
