@@ -20,6 +20,6 @@ function App() {
   );
 }
 
-// Ez fontos: globálisan exportáljuk, hogy a react.html alján hivatkozhassunk rá
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
