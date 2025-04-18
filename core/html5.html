@@ -190,7 +190,8 @@
           const output = document.getElementById("sseStatus");
 
           if (!!window.EventSource) {
-              const source = new EventSource("http://localhost:3000/core/sse.php");
+            const source = new EventSource("../core/sse.php");
+
 
               source.onmessage = function(event) {
                   output.innerHTML = event.data;
